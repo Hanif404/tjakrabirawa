@@ -1,0 +1,157 @@
+
+.welcome
+{
+max-width:315px;
+max-height:300px;
+margin-bottom:1em;
+}
+
+h1.service_home
+{
+	font-size:4.6em;
+	font-weight:100px;
+	margin-top:-0.6em;
+}
+
+img.logo
+{
+	position:relative;
+	left:-1.5em;
+	max-width:204px;
+}
+
+.intro--banner
+{
+	margin-top:10em;
+}
+
+.l-viewport
+{
+	background-color:transparant;
+	background:url(../img/Polygonal.png);
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+
+.sendcontact
+{
+	background:#95C438;
+	color:#fff;
+	opacity:0.7;
+	padding:5px;
+	width:22em;
+	border:none;
+}
+
+.btn-send{
+	background:#95C438;
+	border:none;
+	padding:10px 40px 10px 40px;
+	right:0;
+}
+
+.blog-box{
+	padding:5px;
+}
+.blog-line{
+	border-bottom: 1px solid #545454;
+	width:90%;
+}
+.clean-box{
+	clear: both;
+	height: 2px;
+}
+.article-place{
+	width:80%;
+	float:left;
+	font-size:8pt;
+	text-align: justify;
+	color:#545454;
+}
+
+.article-place h3{
+	font-size:14pt !important;
+}
+.article-place a{
+	text-decoration: none;
+}
+.pic-place{
+	float:left;
+	width: 60px;
+	height: 60px;
+	position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+		margin-top: 10px;
+}
+.pic-place img{
+	display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.writer-box{
+	font-size:8pt;
+	color:#8f8c8c;
+	padding:12px 6px 12px 6px;
+}
+.writer-name{
+	width:30%;
+	float:left;
+}
+.read-more{
+	color:#95C438;
+	font-style:italic;
+}
+.address-contact{
+	padding-bottom: 8%;
+    width: 19%;
+    height: auto;
+    margin-right: 10%;
+    font-size: 9pt;
+}
+.address-contact h3{
+	color:#95C438;
+	margin-bottom: -2px;
+}
+.pagination{
+	margin-right: 75px;
+	font-size: 8pt;
+}
+.pagination ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+.pagination li {
+	display:inline;
+}
+
+.pagination a {
+		display:inline-block;
+		color:#8f8c8c;
+    padding:8px;
+		text-decoration: none;
+}
+
+.pagination a:hover {
+		background-color: #95C438;
+		color:#fff;
+}
+
+.pagination .active a{
+	background-color: #95C438;
+	color:#fff;
+}
+
+.close-place{
+	text-align: right;
+}
+.close-place img{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
