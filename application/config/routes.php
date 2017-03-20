@@ -91,6 +91,15 @@ $route['admin/edit-berita/(:num)'] = 'berita/edit_berita/$1';
 $route['admin/update-berita'] = 'berita/update_berita';
 $route['admin/hapus-berita/(:num)'] = 'berita/hapus_berita/$1';
 
+// =============== Admin Work Route ============ //
+$route['admin/list-work'] = 'work/list_work';
+$route['admin/list-work/page/(:num)'] = 'work/list_work/$1';
+$route['admin/add-work'] = 'work/add_work';
+$route['admin/create-work'] = 'work/create_work';
+$route['admin/edit-work/(:num)'] = 'work/edit_work/$1';
+$route['admin/update-work'] = 'work/update_work';
+$route['admin/hapus-work/(:num)'] = 'work/hapus_work/$1';
+
 // =============== Admin User Management ============ //
 $route['admin/list-user'] = 'user';
 $route['admin/list-user/page/(:num)'] = 'user/$1';
@@ -192,6 +201,11 @@ $route['galleri/detail/(:num)/([A-Za-z0-9][A-Za-z0-9_-]{2,254})'] = 'dashboard/d
 
 $route['berita'] = 'dashboard/list_berita';
 $route['berita/page/(:num)'] = 'dashboard/list_berita/$1';
+
+// ==================================== work Route =============================== //
+
+$route['work'] = 'dashboard/list_work';
+$route['work/page/(:num)'] = 'dashboard/list_work/$1';
 
 // ==================================== Artikel Route =============================== //
 $route['artikel'] = 'dashboard/list_artikel';

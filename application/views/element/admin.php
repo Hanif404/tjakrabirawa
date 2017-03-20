@@ -210,6 +210,22 @@
                             </ul>
                         </li>
 
+                        <li class="treeview <?php if(isset($work_active_treeview)){echo $work_active_treeview ;}?>">
+                            <a href="#">
+                                <i class="fa fa-newspaper-o"></i>
+                                <span>Work</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="<?php if(isset($work_active_list)){echo $work_active_list ;}?>">
+                                    <a href="<?php echo site_url('admin/list-work');?>">Daftar Konten</a>
+                                </li>
+                                <li class="<?php if(isset($work_active_add)){echo $work_active_add ;}?>">
+                                    <a href="<?php echo site_url('admin/add-work');?>">Tambah Konten</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="treeview <?php if(isset($layanan_active_treeview)){echo $layanan_active_treeview ;}?>">
                             <a href="#">
                                 <i class="fa fa-cubes"></i>
