@@ -212,7 +212,7 @@
 
                         <li class="treeview <?php if(isset($work_active_treeview)){echo $work_active_treeview ;}?>">
                             <a href="#">
-                                <i class="fa fa-newspaper-o"></i>
+                                <i class="fa fa-suitcase"></i>
                                 <span>Work</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>

@@ -65,18 +65,19 @@
 
 		function get_news($params = array())
         {
-          $this->db->select('*');
-          $this->db->from('view_blog');
-	         $this->db->where(array('kategori'=> 'news','active'=>'active'));
+          $strquery = "select atk.id, atk.title,  atk.url, atk.meta_keyword, atk.meta_description, atk.isi_berita, atk.kategori , atk.album_id, atk.posisi, atk.active, atk.author, atk.photo, atk.create, atk.last_modified, ad.id_admin, ad.username, ad.password, ad.email, ad.level, ad.foto, ad.last_login, time_format(timediff(now(),atk.last_modified),'%H') AS hour_post, time_format(timediff(now(),atk.last_modified),'%i') AS min_post ";
+          $strquery .= "from artikel atk ";
+          $strquery .= "left join admin ad on ad.id_admin = atk.author ";
+          $strquery .= "where kategori = 'news' and active = 'active' ";
+          $strquery .= "order by id desc ";
 
            if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
-           $this->db->limit($params['limit'],$params['start']);
-       }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
-           $this->db->limit($params['limit']);
-       }
+              $strquery .= "limit  ".$params['start'].",".$params['limit'];
+           }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
+              $strquery .= "limit  ".$params['limit'];
+           }
 
-	    $this->db->order_by('id', 'desc');
-	    $res = $this->db->get();
+	    $res = $this->db->query($strquery);
 
 	    return ($res->num_rows() > 0)?$res->result_array():FALSE;
         }

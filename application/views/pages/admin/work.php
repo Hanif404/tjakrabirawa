@@ -11,7 +11,7 @@
                 </div>
                 <div class="main-header-title clearfix">
                     <div class="pageicon">
-                        <i class="fa fa-newspaper-o fa-5x"></i>
+                        <i class="fa fa-suitcase fa-5x"></i>
                     </div>
                     <div class="page-title">
                         <h3 class="no-margin">DAFTAR WORK</h3>
