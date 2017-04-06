@@ -63,6 +63,11 @@ $route['admin/message'] = 'admin/message';
 $route['admin/message/page/(:num)'] = 'admin/message/$1';
 $route['admin/hapus-message/(:num)'] = 'admin/hapus_message/$1';
 
+// ==================================== Admin Route =========================== //
+
+$route['blog'] = 'blog';
+$route['blog/readmore/(:num)'] = 'blog/detailblog/$1';
+
 // =============== Admin Agenda Route ============ //
 
 $route['admin/agenda'] = 'agenda/list_agenda';

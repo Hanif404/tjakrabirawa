@@ -89,9 +89,9 @@
 
             $config['upload_path'] = 'asset/img/artikel/'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
-            $config['max_size'] = '2048'; //maksimum besar file 2M
-            $config['max_width']  = '1588'; //lebar maksimum 1588 px
-            $config['max_height']  = '1288'; //tinggi maksimu 768 px
+            //$config['max_size'] = '2048'; //maksimum besar file 2M
+            //$config['max_width']  = '1588'; //lebar maksimum 1588 px
+            //$config['max_height']  = '1288'; //tinggi maksimu 768 px
             $config['remove_spaces']  	= TRUE;
             $config['encrypt_name']  	= TRUE;
             $config['image_library'] = 'gd2';
@@ -128,7 +128,7 @@
                         'author'            => $this->session->userdata('ADMIN_ID'),
                         'kategori'          => 'news', //$this->input->post('kategori', TRUE),
                         'posisi'            => 'headline', //$this->input->post('posisi', TRUE),
-                        'isi_berita'        => $this->input->post('isi_berita', TRUE),
+                        'isi_berita'        => $this->input->post('isi_berita'),
                         'posisi'            => $this->input->post('posisi', TRUE),
                         'active'            => 'active',
                         'create'            => date('Y-m-d H:i:s'),
@@ -180,9 +180,9 @@
 
             $config['upload_path'] = 'asset/img/artikel/'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
-            $config['max_size'] = '2048'; //maksimum besar file 2M
-            $config['max_width']  = '1588'; //lebar maksimum 1588 px
-            $config['max_height']  = '1288'; //tinggi maksimu 768 px
+            //$config['max_size'] = '2048'; //maksimum besar file 2M
+            //$config['max_width']  = '1588'; //lebar maksimum 1588 px
+            //$config['max_height']  = '1288'; //tinggi maksimu 768 px
             $config['remove_spaces']  	= TRUE;
             $config['encrypt_name']  	= TRUE;
             $config['image_library'] = 'gd2';

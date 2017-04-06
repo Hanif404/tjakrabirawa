@@ -50,60 +50,6 @@ img.logo
 	right:0;
 }
 
-.blog-box{
-	padding:5px;
-}
-.blog-line{
-	border-bottom: 1px solid #545454;
-	width:90%;
-}
-.clean-box{
-	clear: both;
-	height: 2px;
-}
-.article-place{
-	width:80%;
-	float:left;
-	font-size:8pt;
-	text-align: justify;
-	color:#545454;
-}
-
-.article-place h3{
-	font-size:14pt !important;
-}
-.article-place a{
-	text-decoration: none;
-}
-.pic-place{
-	float:left;
-	width: 60px;
-	height: 60px;
-	position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-		margin-top: 10px;
-}
-.pic-place img{
-	display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-}
-
-.writer-box{
-	font-size:8pt;
-	color:#8f8c8c;
-	padding:12px 6px 12px 6px;
-}
-.writer-name{
-	width:30%;
-	float:left;
-}
-.read-more{
-	color:#95C438;
-	font-style:italic;
-}
 .address-contact{
 	padding-bottom: 8%;
     width: 19%;
@@ -114,37 +60,6 @@ img.logo
 .address-contact h3{
 	color:#95C438;
 	margin-bottom: -2px;
-}
-.pagination{
-	margin-right: 75px;
-	font-size: 8pt;
-}
-.pagination ul {
-	list-style:none;
-	margin:0;
-	padding:0;
-	text-align:center;
-}
-
-.pagination li {
-	display:inline;
-}
-
-.pagination a {
-		display:inline-block;
-		color:#8f8c8c;
-    padding:8px;
-		text-decoration: none;
-}
-
-.pagination a:hover {
-		background-color: #95C438;
-		color:#fff;
-}
-
-.pagination .active a{
-	background-color: #95C438;
-	color:#fff;
 }
 
 .close-place{
@@ -212,4 +127,16 @@ img.logo
 .btn_prev svg{
 	width: 20px;
 	fill: #fff
+}
+
+.blog-space{
+		text-align: center;
+}
+.blog-space a{
+	text-decoration: none;
+	color: white;
+}
+.blog-space > a > h1{
+	margin-top: 0em;
+  font-size: 45pt;
 }
