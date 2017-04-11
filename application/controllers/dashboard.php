@@ -16,6 +16,7 @@
           $this->data['trainingData'] = $this->home_m->main_layanan();
     			$this->data['slider'] = $this->home_m->get_slider();
     			$this->data['tentang'] = $this->home_m->get_tentang();
+    			$this->data['service'] = $this->home_m->get_service();
             $this->load->view('pages/dashboard',$this->data);
         }
 

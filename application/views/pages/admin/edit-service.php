@@ -5,15 +5,15 @@
                 <div id="breadcrumb">
                     <ul class="breadcrumb">
                         <li><i class="fa fa-home"></i><a href="<?php echo base_url('admin/dashboard');?>"> Dashboard</a></li>
-                        <li class="active">Add Training</li>
+                        <li class="active">Update Service</li>
                     </ul>
                 </div>
                 <div class="main-header-title clearfix">
                     <div class="pageicon">
-                        <i class="fa fa-cubes fa-5x"></i>
+                        <i class="fa fa-briefcase fa-5x"></i>
                     </div>
                     <div class="page-title">
-                        <h3 class="no-margin">ADD TRAINING</h3>
+                        <h3 class="no-margin">UPDATE SERVICE</h3>
                         <span>Welcome back <?php echo $this->session->userdata('USERNAME'); ?></span>
                     </div>
                     <ul class="page-stats">
@@ -34,7 +34,7 @@
                             <div class="box box-success">
                                 <div class="box-header">
                                     <i class="fa fa-edit"></i>
-                                    <h3 class="box-title">Add Training</h3>
+                                    <h3 class="box-title">Update Service</h3>
                                     <!-- tools box -->
                                      <div class="pull-right box-tools">
                                         <button class="btn btn-success btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -43,31 +43,31 @@
                                     </div><!-- /. tools -->
                                 </div><!-- /.box-header -->
                                 <div class="box-body pad">
-                                    <form action="<?php echo site_url('admin/create-training');?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo site_url('admin/update-service');?>" method="post" enctype="multipart/form-data">
+
                                         <div class="form-group">
-                                            <label>Nama Training :</label>
+                                            <label>Judul :</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-tag"></i>
                                                 </div>
-                                                <input type="text" name="title_layanan" id="title" class="form-control news title" required />
+                                                <input type="text" name="title" id="title" value="<?php echo $service['title']; ?>" class="form-control news title" required />
                                             </div><!-- /.input group -->
                                         </div>
-                                        <!--
                                         <div class="form-group">
-                                            <label>Image :</label>
+                                            <label>Gambar Konten :</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-upload"></i>
                                                 </div>
-                                                <?php /**echo form_upload(array('name'=>'userfile', 'id'=>'userfile', 'class'=>'btn btn-default btn-flat form-control')); */ ?>
-                                            </div>
+                                                <?php echo form_upload(array('name'=>'userfile', 'id'=>'userfile', 'class'=>'btn btn-default btn-flat form-control')); ?>
+                                            </div><!-- /.input group -->
                                         </div>
                                         <div class="form-group">
-                                            <label>Deskripsi :</label>
-                                            <textarea id="editor1" name="deskripsi" rows="10" cols="80"></textarea>
+                                            <label>Isi Service :</label>
+                                            <textarea id="editor1" name="isi_berita" rows="10" cols="80"><?php echo $service['isi_berita']; ?></textarea>
                                         </div>
-                                        -->
+                                        <input type="hidden" name="id" value="<?php echo $service['id']; ?>" />
                                         <div class="box-footer">
                                             <button type="submit" class="btn btn-success">Save</button>
                                             <button type="submit" class="btn btn-default pull-right">Cancel</button>
@@ -84,6 +84,7 @@
             <script src="<?php echo base_url('asset/admin/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
 
             <link rel="stylesheet" href="<?php echo base_url('asset/admin/bootstrap/css/endless.min.css'); ?>">
+            <script src="<?php echo base_url('asset/admin/plugins/fastclick/fastclick.min.js'); ?>"></script>
             <!-- CK Editor -->
             <script src="<?php echo base_url('asset/admin/plugins/filemanager/js/ckeditor/ckeditor.js'); ?>"></script>
             <script src="<script src="<?php echo base_url('asset/admin/plugins/filemanager/sample.js'); ?>" type="text/javascript"></script>

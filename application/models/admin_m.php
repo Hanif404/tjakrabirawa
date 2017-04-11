@@ -213,6 +213,22 @@
 			return false;
         }
 
+        function detail_service($per_page, $offset)
+        {
+            if ($offset != 0) $offset = ($offset-1) * $per_page;
+
+            $this->db->select('*');
+			$this->db->from('artikel at');
+      //$this->db->join('admin ad', 'ad.id_admin = at.author', 'left');
+      $this->db->where('kategori', 'service');
+            $this->db->limit($per_page, $offset);
+			$this->db->order_by('id', 'desc');
+			$res = $this->db->get();
+
+			if ($res->num_rows() > 0) return $res->result_array();
+			return false;
+        }
+
         function detail_work($per_page, $offset)
         {
             if ($offset != 0) $offset = ($offset-1) * $per_page;

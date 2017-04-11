@@ -5,7 +5,7 @@
                 <div id="breadcrumb">
                     <ul class="breadcrumb">
                         <li><i class="fa fa-home"></i><a href="<?php echo base_url('admin/dashboard');?>"> Dashboard</a></li>
-                        <li class="active">Update Layanan</li>
+                        <li class="active">Update Training</li>
                     </ul>
                 </div>
                 <div class="main-header-title clearfix">
@@ -13,7 +13,7 @@
                         <i class="fa fa-database fa-5x"></i>
                     </div>
                     <div class="page-title">
-                        <h3 class="no-margin">UPDATE LAYANAN</h3>
+                        <h3 class="no-margin">UPDATE TRAINING</h3>
                         <span>Welcome back <?php echo $this->session->userdata('USERNAME'); ?></span>
                     </div>
                     <ul class="page-stats">
@@ -34,7 +34,7 @@
                             <div class="box box-success">
                                 <div class="box-header">
                                     <i class="fa fa-edit"></i>
-                                    <h3 class="box-title">Update Layanan</h3>
+                                    <h3 class="box-title">Update Training</h3>
                                     <!-- tools box -->
                                      <div class="pull-right box-tools">
                                         <button class="btn btn-success btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -43,9 +43,9 @@
                                     </div><!-- /. tools -->
                                 </div><!-- /.box-header -->
                                 <div class="box-body pad">
-                                    <form action="<?php echo site_url('admin/update-layanan/'.$layanan['id_layanan']);?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo site_url('admin/update-training/'.$layanan['id_layanan']);?>" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label>Nama Layanan :</label>
+                                            <label>Nama training :</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-tag"></i>

@@ -193,6 +193,12 @@
                                 <span>Daftar Pesan</span>
                             </a>
                         </li>
+                        <li class="<?php if(isset($service_menu)){echo $service_menu;}?>">
+                            <a href="<?php echo site_url('admin/service');?>">
+                                <i class="fa fa-briefcase"></i>
+                                <span>Daftar Service</span>
+                            </a>
+                        </li>
 
                         <li class="treeview <?php if(isset($berita_active_treeview)){echo $berita_active_treeview ;}?>">
                             <a href="#">
@@ -229,15 +235,15 @@
                         <li class="treeview <?php if(isset($layanan_active_treeview)){echo $layanan_active_treeview ;}?>">
                             <a href="#">
                                 <i class="fa fa-cubes"></i>
-                                <span>Layanan</span>
+                                <span>Training</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="<?php if(isset($layanan_active_list)){echo $layanan_active_list ;}?>">
-                                    <a href="<?php echo site_url('admin/list-layanan');?>">Daftar Layanan</a>
+                                <li class="<?php if(isset($training_active_list)){echo $training_active_list ;}?>">
+                                    <a href="<?php echo site_url('admin/list-training');?>">Daftar Training</a>
                                 </li>
-                                <li class="<?php if(isset($layanan_active_add)){echo $layanan_active_add ;}?>">
-                                    <a href="<?php echo site_url('admin/add-layanan');?>">Tambah Layanan</a>
+                                <li class="<?php if(isset($training_active_add)){echo $training_active_add ;}?>">
+                                    <a href="<?php echo site_url('admin/add-training');?>">Tambah Training</a>
                                 </li>
                             </ul>
                         </li>

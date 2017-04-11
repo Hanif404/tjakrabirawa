@@ -1,20 +1,18 @@
-
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-                <!-- Content Header (Page header) -->
                 <div id="breadcrumb">
                     <ul class="breadcrumb">
                         <li><i class="fa fa-home"></i><a href="<?php echo base_url('admin/dashboard');?>"> Dashboard</a></li>
-                        <li class="active">List Training</li>
+                        <li class="active"></li>
                     </ul>
                 </div>
                 <div class="main-header-title clearfix">
                     <div class="pageicon">
-                        <i class="fa fa-cubes fa-5x"></i>
+                        <i class="fa fa-briefcase fa-5x"></i>
                     </div>
                     <div class="page-title">
-                        <h3 class="no-margin">LIST TRAINING</h3>
+                        <h3 class="no-margin">SERVICE</h3>
                         <span>Welcome back <?php echo $this->session->userdata('USERNAME'); ?></span>
                     </div>
                     <ul class="page-stats">
@@ -26,6 +24,7 @@
                 <div class="grey-container shortcut-wrapper">
                     <?php echo $this->session->flashdata('pesan'); ?>
                 </div>
+
                 <!-- Main content -->
                 <section class="content">
                 <!-- Your Page Content Here -->
@@ -33,36 +32,26 @@
                         <div class="col-md-12">
                             <div class="box box-success">
                                 <div class="box-header">
-                                    <i class="fa fa-cubes"></i>
-                                    <h3 class="box-title">List Training</h3>
-                                    <!-- tools box -->
-                                    <div class="pull-right box-tools">
-                                        <div class="box-tools pull-right">
-                                            <div class="has-feedback">
-                                                <input type="text" class="form-control input-sm" placeholder="Search...">
-                                                <span class="glyphicon glyphicon-search form-control-feedback text-muted"></span>
-                                            </div>
-                                        </div>
-                                    </div><!-- /. tools -->
+                                    <i class="ion ion-clipboard"></i>
+                                    <h3 class="box-title">List Service</h3>
+
                                 </div><!-- /.box-header -->
                                 <div class="box-body table-responsive no-padding">
                                     <table class="table table-bordered table-condensed table-hover table-striped table-vertical-center">
                                         <thead>
                                             <tr>
                                                 <th class="centeralign" width="5%">#</th>
-                                                <th width="60%">Nama Training</th>
-                                                <!--<th width="50%">Deskripsi</th>-->
-                                                <!--<th width="10%">Cover</th>-->
-                                                <th width="5%">Option</th>
+                                                <th width="20%">Judul</th>
+					                                      <th width="10%">option</th>
                                             </tr>
                                         </thead>
-                                        <?php if($layanan): ?>
-                                        <?php $i = 1; foreach ($layanan as $key => $layanan): ?>
+                                        <?php if($service): ?>
+                                        <?php $i = 1; foreach ($service as $key => $service): ?>
                                             <tbody>
                                                 <tr>
                                                     <td valign="top"><?php echo $i++; ?></td>
-                                                    <td valign="top"><?php echo $layanan['title_layanan']; ?></td>
-                                                    <td align="center"><a href="<?php echo base_url('admin/edit-training/'.$layanan['id_layanan']);?>"><i class="fa fa-edit"></i></a></td>
+                                                    <td valign="top"><?php echo $service['title']; ?></td>
+                                                    <td style="text-align:center"><a href="<?php echo base_url('admin/edit-service/'.$service['id']);?>"><i class="fa fa-edit"></i></a>
                                                 </tr>
                                             </tbody>
                                         <?php endforeach; ?>
@@ -82,7 +71,3 @@
                 </section><!-- /.content -->
             </div><!-- /.content-wrapper -->
             <link rel="stylesheet" href="<?php echo base_url('asset/admin/bootstrap/css/endless.min.css'); ?>">
-            <!-- jQuery 2.1.4 -->
-            <script src="<?php echo base_url('asset/admin/plugins/jQuery/jQuery-2.1.4.min.js'); ?>"></script>
-            <!-- AdminLTE for demo purposes -->
-            <script src="<?php echo base_url('asset/admin/dist/js/demo.js'); ?>"></script>

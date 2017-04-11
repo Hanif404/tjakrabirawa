@@ -12,7 +12,7 @@
             $id_admin = $this->session->userdata('ADMIN_ID');
 
             $offset = ($this->uri->segment(4)) ? $this->uri->segment(4) : 1;
-	    $config['base_url'] = base_url().'admin/list-layanan/page/';
+	    $config['base_url'] = base_url().'admin/list-training/page/';
             $config['total_rows'] = $this->admin_m->total_layanan();
 	    $config['per_page'] = 20;
 	    $config['uri_segment'] = 4;
@@ -47,10 +47,10 @@
             $this->data['sort_number'] = $offset + ($offset - 1) * ($config['per_page'] - 1);
             $this->data['layanan'] = $this->admin_m->detail_layanan($config['per_page'], $offset);
 
-	    $this->data['layanan_active_treeview'] = "active";
-            $this->data['layanan_active_list'] = "active";
+	    $this->data['training_active_treeview'] = "active";
+            $this->data['training_active_list'] = "active";
             $this->data['admin'] = $this->admin_m->account_admin($id_admin);
-            $this->data['title'] = "Layanan Publikasi";
+            $this->data['title'] = "Training";
             $this->load->view('element/admin',$this->data);
             $this->load->view('pages/admin/layanan');
             $this->load->view('element/footer-admin');
@@ -62,9 +62,9 @@
             $id_admin = $this->session->userdata('ADMIN_ID');
 
             $this->data['admin'] = $this->admin_m->account_admin($id_admin);
-            $this->data['layanan_active_treeview'] = "active";
-            $this->data['layanan_active_add'] = "active";
-            $this->data['title'] = "Administrator - Add Layanan";
+            $this->data['training_active_treeview'] = "active";
+            $this->data['training_active_add'] = "active";
+            $this->data['title'] = "Administrator - Add Training";
             $this->load->view('element/admin',$this->data);
             $this->load->view('pages/admin/add-layanan');
             $this->load->view('element/footer-admin');
@@ -126,7 +126,7 @@
 
                     $res_update = $this->admin_m->add_layanan($data);
 
-                    $this->session->set_flashdata("pesan", "<div class=\"callout callout-success\" id=\"alert\">Layanan Berhasil Di Tambahkan !!</div>");
+                    $this->session->set_flashdata("pesan", "<div class=\"callout callout-success\" id=\"alert\">Training Berhasil Di Tambahkan !!</div>");
                     redirect('admin/list-layanan');
 
           //      }else{
@@ -148,7 +148,7 @@
 
             $this->data['layanan'] = $this->admin_m->get_layanan($id_layanan);
             $this->data['admin'] = $this->admin_m->account_admin($id_admin);
-            $this->data['layanan_active_treeview'] = "active";
+            $this->data['training_active_treeview'] = "active";
             $this->data['title'] = "Administrator - Edit Layanan";
             $this->load->view('element/admin',$this->data);
             $this->load->view('pages/admin/edit-layanan');
@@ -215,8 +215,8 @@
             //        $new_album_name = "asset/img/layanan/". slug($this->input->post('title_layanan', TRUE)) ."";
             //        @rename($old_album_name, $new_album_name);
 
-                    $this->session->set_flashdata("pesan", "<div class=\"callout callout-success\" id=\"alert\">Layanan Berhasil Di Update !!</div>");
-                    redirect('admin/list-layanan');
+                    $this->session->set_flashdata("pesan", "<div class=\"callout callout-success\" id=\"alert\">Training Berhasil Di Update !!</div>");
+                    redirect('admin/list-training');
 
             //    }else{
 

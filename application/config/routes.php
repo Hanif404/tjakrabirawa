@@ -63,6 +63,10 @@ $route['admin/message'] = 'admin/message';
 $route['admin/message/page/(:num)'] = 'admin/message/$1';
 $route['admin/hapus-message/(:num)'] = 'admin/hapus_message/$1';
 
+$route['admin/service'] = 'admin/service';
+$route['admin/update-service'] = 'admin/update_service';
+$route['admin/service/page/(:num)'] = 'admin/service/$1';
+$route['admin/edit-service/(:num)'] = 'admin/edit_service/$1';
 // ==================================== Admin Route =========================== //
 
 $route['blog'] = 'blog';
@@ -158,14 +162,14 @@ $route['admin/hapus-static-page/(:num)'] = 'website/hapus_static/$1';
 
 // ==================================== Admin Layanan Route =============================== //
 
-$route['admin/list-layanan'] = 'layanan';
-$route['admin/list-layanan/page/(:num)'] = 'layanan/$1';
+$route['admin/list-training'] = 'layanan';
+$route['admin/list-training/page/(:num)'] = 'layanan/$1';
 
-$route['admin/add-layanan'] = 'layanan/add_layanan';
-$route['admin/create-layanan'] = 'layanan/create_layanan';
+$route['admin/add-training'] = 'layanan/add_layanan';
+$route['admin/create-training'] = 'layanan/create_layanan';
 
-$route['admin/edit-layanan/(:num)'] = 'layanan/edit_layanan/$1';
-$route['admin/update-layanan/(:num)'] = 'layanan/update_layanan/$1';
+$route['admin/edit-training/(:num)'] = 'layanan/edit_layanan/$1';
+$route['admin/update-training/(:num)'] = 'layanan/update_layanan/$1';
 
 
 // ==================================== Admin Regulasi Route =============================== //

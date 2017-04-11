@@ -95,6 +95,19 @@
 	    return false;
         }
 
+        function get_service()
+            {
+                $this->db->select('id, title, photo, isi_berita');
+    	    $this->db->from('artikel');
+    	    $this->db->where(array('kategori'=> 'service','active'=>'active'));
+                $this->db->limit(4, 0);
+    	    $this->db->order_by('id', 'desc');
+    	    $res = $this->db->get();
+
+    	    if ($res->num_rows() > 0) return $res->result_array();
+    	    return false;
+            }
+
 
 		// ============================================ //
 	public function read($id_menu)
