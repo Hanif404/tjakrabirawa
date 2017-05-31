@@ -3283,7 +3283,7 @@
 			@media screen and (max-width: 1280px) {
 
 				.wrapper.fullscreen {
-					min-height: calc(100vh - 2.5em);
+					/**min-height: calc(100vh - 2.5em);**/
 				}
 
 					body.is-ie .wrapper.fullscreen {
@@ -3465,8 +3465,8 @@
 		@media screen and (max-width: 1280px) {
 
 			#sidebar + #wrapper {
-				margin-left: 0;
-				padding-top: 3.5em;
+				margin-left: 19em;
+				padding-top: 0;
 			}
 
 		}
@@ -3475,6 +3475,7 @@
 
 			#sidebar + #wrapper {
 				padding-top: 0;
+				margin-left: 0em;
 			}
 
 		}

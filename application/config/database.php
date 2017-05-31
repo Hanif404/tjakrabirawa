@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '7Bionic.';
+$db['default']['password'] = 'wrc123';
 $db['default']['database'] = 'layout4db';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
